@@ -1,0 +1,30 @@
+#homeImg {
+    display:block;
+    margin-right:auto;
+    margin-left: auto;
+}
+header{
+    display: flex;
+    justify-content: center;
+    background: black;
+}
+button {
+    color: white;
+    background: transparent;
+    border: none;
+}
+h1, h2 {
+    text-align: center;
+}
+img {
+    width:25%;
+    height:25%;
+}
+.menuPics{
+    display:block;
+    margin-left:auto;
+    margin-right:auto
+}
+.captions{
+    text-align:center;
+}
