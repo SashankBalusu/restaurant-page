@@ -11,11 +11,21 @@ menu.textContent = "menu"
 body.insertBefore(header, body.firstChild)
 const contact = document.createElement("button")
 contact.textContent = "contact"
-header.appendChild(home)
-header.appendChild(contact)
-header.appendChild(menu)
+contact.id = "contact"
+const name = document.createElement("h1")
+name.textContent = "El Restaurante"
+name.id = "name"
+const nav = document.createElement("nav")
+header.appendChild(name)
+header.appendChild(nav)
+nav.appendChild(home)
+nav.appendChild(contact)
+nav.appendChild(menu)
 onStart();
 home.addEventListener("click", function(){
+    home.setAttribute("style", "border-bottom: solid")
+    menu.setAttribute("style", "border-bottom: none")
+    contact.setAttribute("style", "border-bottom: none")
     if (curPage == "home"){
         return;
     }
@@ -30,6 +40,9 @@ home.addEventListener("click", function(){
     curPage = "home";
 })
 contact.addEventListener("click", function(){
+    home.setAttribute("style", "border-bottom: none")
+    menu.setAttribute("style", "border-bottom: none")
+    contact.setAttribute("style", "border-bottom: solid")
     if (curPage == "home"){
         remHome();
         contactUs();
@@ -44,6 +57,9 @@ contact.addEventListener("click", function(){
     curPage = "contact";
 })
 menu.addEventListener("click", function(){
+    home.setAttribute("style", "border-bottom: none")
+    menu.setAttribute("style", "border-bottom: solid")
+    contact.setAttribute("style", "border-bottom: none")
     if (curPage == "home"){
         remHome();
         menuPage();

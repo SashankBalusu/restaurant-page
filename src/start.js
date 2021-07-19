@@ -1,21 +1,18 @@
 import './style.css';
 import chef from "./chef.jpeg"
 const content = document.querySelector("#content")
-let name;
-let tagline;
-let chefImg;
 
 function onStart(){
-    name = document.createElement("h1")
-    name.textContent = "{restaurant name}"
-    content.appendChild(name)
-    tagline = document.createElement("h2")
-    tagline.textContent = "The best food in the lower south east region of Freeport, Maine"
-    content.appendChild(tagline);
-    chefImg = document.createElement("img")
+    let chefImg = document.createElement("img")
     chefImg.src = chef
     chefImg.id = "homeImg"
     content.appendChild(chefImg)
+    let tagline = document.createElement("h2")
+    tagline.textContent = "The best food in the lower south east region of San Jose, California"
+    content.appendChild(tagline);
+    let tag = document.createElement("h2")
+    tag.textContent = "Made with pride since 500 B.C."
+    content.appendChild(tag)
 
 }
 function remHome(){
